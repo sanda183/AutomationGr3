@@ -12,7 +12,7 @@ public static WebDriver driver;
 
 public static void setUp(){
     LOG.info ("Start test");
-    System.setProperty("webdriver.chrome.driver", "C://Webdriverchromedriver110.exe");
+    System.setProperty("webdriver.chrome.driver", "C:\\Webdriver\\chromedriver110.exe");
     driver = new ChromeDriver();
     String url = "https://demo.automationtesting.in/Index.html";
     driver.get(url);
