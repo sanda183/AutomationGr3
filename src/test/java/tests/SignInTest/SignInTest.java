@@ -1,15 +1,30 @@
 package tests.SignInTest;
 
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
 public class SignInTest extends BaseTest {
+
     @Test
     public void checkIfLogoIsDisplayed(){
-    Assert.assertTrue(signInPage.isLogoDisplayed(), "Logo is not Displayed");
+   String email = "grupa3@automation.com";
 
-}
+
+//   Log.info("Verify if Logo is displayed");
+   Assert.assertTrue(signInPage.isLogoDisplayed(), "Logo is not Displayed");
+
+
+//   Log.info("Complete the email field");
+    Assert.assertTrue(signInPage.isEmailFieldDisplayed(),"Email field is not displayed");
+    signInPage.typeInEmailField(email);
+   signInPage.clickNextButton();
+    }
+
+
+
+
 
 
 

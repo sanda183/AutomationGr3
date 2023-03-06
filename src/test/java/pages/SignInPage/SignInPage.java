@@ -10,26 +10,28 @@ public class SignInPage extends  BasePage {
 
     public static SignInPage instance;
 
-    private SignInPage(){}
+    private SignInPage() {
+    }
 
-    public static SignInPage getInstance(){
-        if (instance == null){
+    public static SignInPage getInstance() {
+        if (instance == null) {
             instance = new SignInPage();
         }
         return instance;
     }
-private final By logo = By.id ("logo");
-private final By signInButton = By.id("btn1");
-private final By skipSignInButton = By.id("btn2");
-private final By emailField = By.id("email");
-private final By nextButton = By.id("entering");
 
-public boolean isLogoDisplayed (){
-    LOG.info("Verify if LogoisDisplayed");
-    return driver.findElement(logo).isDisplayed(); //return se foloseste doar la boolean;
-}
+    private final By logo = By.id("logo");
+    private final By signInButton = By.id("btn1");
+    private final By skipSignInButton = By.id("btn2");
+    private final By emailField = By.id("email");
+    private final By nextButton = By.id("enterimg");
 
-   public boolean isSigninButtonDisplayed() {
+    public boolean isLogoDisplayed() {
+        LOG.info("Verify if LogoisDisplayed");
+        return driver.findElement(logo).isDisplayed(); //return se foloseste doar la boolean;
+    }
+
+    public boolean isSigninButtonDisplayed() {
         LOG.info("Verify if Sign in button is Displayed");
         return driver.findElement(signInButton).isDisplayed();
     }
@@ -39,37 +41,33 @@ public boolean isLogoDisplayed (){
         return driver.findElement(By.id("SkipSigninButton")).isDisplayed();
     }
 
-    public boolean isEmailFieldDisplayed () {
+    public boolean isEmailFieldDisplayed() {
         LOG.info("Verify if Email Field is Displayed");
         return driver.findElement(emailField).isDisplayed();
     }
 
 
-
+    public void clickSkipSignInButton() {
+        LOG.info("Click Skip Sign in Button");
+        driver.findElement(skipSignInButton).click();
     }
 
 
-//    public void clickSkipSignInButton (){
-//    LOG.info("Click Skip Sign in Button");
-//    driver.findElement(skipSignInButton).click();
-//    }
-//
-//
-//    }
-//   public void typeInEmailField (String email) {
-//       LOG.info("Type in Email Field");
-//       driver.findElement(emailField).sendKeys(email);
-//    }
-//
-//    }
-//
-//
-//
-//    public void clickNextButton() {
-//    LOG.info("Click Next Button");
-//    driver.findElement(nextButton).click();
-//    }
-//        }
+
+   public void typeInEmailField (String email) {
+       LOG.info("Type in Email Field");
+       driver.findElement(emailField).sendKeys(email);
+    }
+
+
+
+
+
+    public void clickNextButton() {
+    LOG.info("Click Next Button");
+    driver.findElement(nextButton).click();
+    }
+        }
 
 
 
