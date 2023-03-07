@@ -3,7 +3,11 @@
 <suite name="testng" verbose="1">
     <test name="PositiveTest">
         <classes>
+            <class name="tests.SignInTest.SignUpTest"
+            <class name="tests.SignInTest.SignUpTest"></class>
         </classes>
     </test>
 
 </suite>
+
+

@@ -29,7 +29,22 @@ public static void setUp(){
     driver.quit();
     }
 
-
-
+public static String returnBaseUrl(){
+    return "https://demo.automationtesting.in/Index.html" ;
 }
+public static String getBaseUrl(){
+    String baseUrl = returnBaseUrl();
+    if (baseUrl != null) {
+        return returnBaseUrl().replace("Index.html", "");
+    }
+    return returnBaseUrl();
+    }
+
+    public void isSignInButtonDisplayed() {
+    }
+
+    public void clickSignInButton() {
+    }
+}
+
 
